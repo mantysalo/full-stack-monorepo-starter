@@ -18,7 +18,7 @@
     "lint": "eslint './packages/**/*.{ts,tsx,js,jsx}'",
     "lint:frontend": "eslint './packages/frontend/*.{ts,tsx,js,jsx}'",
     "lint:backend": "eslint './packages/backend/*.{ts,tsx,js,jsx}'",
-    "bootstrap": "lerna bootstrap"
+    "bootstrap": "lerna bootstrap --hoist"
   },
   "author": "Riku Mäntysalo",
   "license": "MIT",
