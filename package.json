@@ -1,0 +1,37 @@
+{
+  "name": "full-stack-monorepo-starter",
+  "version": "1.0.0",
+  "description": "Full stack monorepo boilerplate",
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "start": "lerna run start --parallel",
+    "start:frontend": "lerna run start --stream --scope frontend",
+    "start:backend": "lerna run start --stream --scope backend",
+    "build": "lerna run build --parallel",
+    "build:frontend": "lerna run build --stream --scope frontend",
+    "build:backend": "lerna run build --stream --scope backend",
+    "test": "lerna run test --parallel",
+    "test:frontend": "lerna run test --stream --scope frontend",
+    "test:backend": "lerna run test --stream --scope backend",
+    "lint": "eslint './packages/**/*.{ts,tsx,js,jsx}'",
+    "lint:frontend": "eslint './packages/frontend/*.{ts,tsx,js,jsx}'",
+    "lint:backend": "eslint './packages/backend/*.{ts,tsx,js,jsx}'",
+    "bootstrap": "lerna bootstrap"
+  },
+  "author": "Riku Mäntysalo",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^25.2.3",
+    "lerna": "^3.20.2",
+    "prettier": "^2.0.2",
+    "ts-jest": "^25.2.1",
+    "typescript": "^3.8.3"
+  }
+}

@@ -1,0 +1,14 @@
+version: "3"
+services:
+  database:
+    image: postgres
+    ports:
+      - "5432:5432"
+    env_file:
+      - ./packages/backend/.env
+    environment:
+      - "POSTGRES_PASSWORD=${DB_PASSWORD:-postgres}"
+      - "POSTGRES_USER=${DB_USERNAME:-postgres}"
+      - "POSTGRES_DB=${DB_NAME:-postgres}"
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
